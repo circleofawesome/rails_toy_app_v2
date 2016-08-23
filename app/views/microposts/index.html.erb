@@ -19,6 +19,7 @@
         <td><%= link_to 'Show', micropost %></td>
         <td><%= link_to 'Edit', edit_micropost_path(micropost) %></td>
         <td><%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Turn me on', turn_on_micropost_path(micropost) %></td>  <!--HOLY FUCKING SHIT THIS WORKS-->
       </tr>
     <% end %>
   </tbody>

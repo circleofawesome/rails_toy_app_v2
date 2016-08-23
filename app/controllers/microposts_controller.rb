@@ -21,6 +21,14 @@ class MicropostsController < ApplicationController
   def edit
   end
 
+  #sam code below
+  def turn_on
+    @micropost = Micropost.find(params[:id])
+    @micropost.on=true
+    @micropost.save
+    redirect_to :back
+  end   #HOLY FUCKING SHIT TITS THIS WORKS
+
   # POST /microposts
   # POST /microposts.json
   def create
