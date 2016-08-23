@@ -29,6 +29,13 @@ class MicropostsController < ApplicationController
     redirect_to :back
   end   #HOLY FUCKING SHIT TITS THIS WORKS
 
+  def turn_off
+    @micropost = Micropost.find(params[:id])
+    @micropost.on=false
+    @micropost.save
+    redirect_to :back
+  end
+
   # POST /microposts
   # POST /microposts.json
   def create
